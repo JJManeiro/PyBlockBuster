@@ -2,10 +2,10 @@ import sys
 from PyQt6.QtCore import QSize, Qt
 from PyQt6.QtWidgets import *
 class Pelis (QMainWindow):
-    def __init__(self):
+    def __init__(self,ref):
         super().__init__()
         self.setWindowTitle("Pelis de la taquillera")
-        
+        self.ref = ref
         caixaV = QVBoxLayout()
         caixaTaboa = QVBoxLayout()
         caixaH = QHBoxLayout()
@@ -13,7 +13,7 @@ class Pelis (QMainWindow):
 
         lid = QLabel("ID")
         lnome = QLabel("Título")
-        lprecio = QLabel ("Precio")
+        lprecio = QLabel ("Presupuesto")
         ldirector = QLabel("Director")
         lactores = QLabel("Actores principales")
         loscar = QLabel("Oscares")
@@ -63,8 +63,14 @@ class Pelis (QMainWindow):
 
         self.setFixedSize (800,600)
         self.show()
+    def closeEvent (self, event):
+        self.ref.show()
+        self.close()
+        
+'''
 if __name__=="__main__":
 
     app = QApplication(sys.argv)
     Pelis = Pelis()
     app.exec()
+'''    

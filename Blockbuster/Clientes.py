@@ -2,10 +2,10 @@ import sys
 from PyQt6.QtCore import QSize, Qt
 from PyQt6.QtWidgets import *
 class Clientes (QMainWindow):
-    def __init__(self):
+    def __init__(self,ref):
         super().__init__()
         self.setWindowTitle("Registro de los clientes.")
-        
+        self.ref = ref
         caixaV = QVBoxLayout()
         caixaTaboa = QVBoxLayout()
         caixaH = QHBoxLayout()
@@ -23,10 +23,11 @@ class Clientes (QMainWindow):
         self.IDEmp = QLineEdit()
         self.Precio = QLineEdit()
         self.Tipo = QComboBox(self)
-        self.Tipo.addItem("Matutina")
-        self.Tipo.addItem("Vespertina")
-        self.Tipo.addItem("Nocturna")
-        
+        self.Tipo.addItem("Infante")
+        self.Tipo.addItem("Adulto")
+        self.Tipo.addItem("Anciano")
+        self.sus = QCheckBox("Suscrito?")
+
         self.Taboa = QTableView()
         self.btnEngadir = QPushButton("Engadir")
         self.btnEditar = QPushButton("Editar")
@@ -44,6 +45,7 @@ class Clientes (QMainWindow):
         grid.addWidget(self.Precio,1,3,1,1)
         grid.addWidget(ltipo, 2,2,1,1)
         grid.addWidget(self.Tipo,2,3,1,2)
+        grid.addWidget(self.sus,3,1,1,1)
 
         caixaTaboa.addWidget(self.btnEngadir)
         caixaTaboa.addWidget(self.btnEditar)
@@ -55,11 +57,15 @@ class Clientes (QMainWindow):
         container = QWidget()
         container.setLayout(caixaV)
         self.setCentralWidget(container)
-
         self.setFixedSize (800,600)
         self.show()
+    def closeEvent (self, event):
+        self.ref.show()
+        self.close()    
+'''
 if __name__=="__main__":
 
     app = QApplication(sys.argv)
     Clientes = Clientes()
     app.exec()
+'''    

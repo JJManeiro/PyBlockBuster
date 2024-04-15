@@ -2,10 +2,10 @@ import sys
 from PyQt6.QtCore import QSize, Qt
 from PyQt6.QtWidgets import *
 class Empleados (QMainWindow):
-    def __init__(self):
+    def __init__(self,ref):
         super().__init__()
         self.setWindowTitle("Cartilla de los empleados.")
-        
+        self.ref = ref
         caixaV = QVBoxLayout()
         caixaTaboa = QVBoxLayout()
         caixaH = QHBoxLayout()
@@ -59,11 +59,15 @@ class Empleados (QMainWindow):
         container = QWidget()
         container.setLayout(caixaV)
         self.setCentralWidget(container)
-
         self.setFixedSize (800,600)
         self.show()
+    def closeEvent (self, event):
+        self.ref.show()
+        self.close()    
+'''        
 if __name__=="__main__":
 
     app = QApplication(sys.argv)
     Empleados = Empleados()
     app.exec()
+'''    

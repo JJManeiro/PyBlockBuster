@@ -4,6 +4,7 @@ from PyQt6.QtWidgets import *
 from Pelis import Pelis
 from Empleados import Empleados
 from Clientes import Clientes
+from Suscritos import Suscritos
 class Blockbuster (QMainWindow):
     def __init__(self):
         super().__init__()
@@ -16,25 +17,34 @@ class Blockbuster (QMainWindow):
         self.Empleados.pressed.connect(self.ConEmpleados)
         self.Clientes = QPushButton("Clientes")
         self.Clientes.pressed.connect(self.ConClientes)
+        self.Suscritos = QPushButton("Suscritos")
+        self.Suscritos.pressed.connect(self.ConSuscritos)
         
         caixaH.addWidget(self.Pelis)
         caixaH.addWidget(self.Empleados)
         caixaH.addWidget(self.Clientes)
+        caixaH.addWidget(self.Suscritos)
         container = QWidget()
         container.setLayout(caixaH)
         self.setCentralWidget(container)
-        self.setFixedSize (800,600)
+        self.setFixedSize (600,450)
         self.show()
     
     def ConPelis(self):
-        Pelis()
+        self.P = Pelis(self)
+        self.hide()
     def ConEmpleados(self):
-        Empleados()
+        self.E = Empleados(self)
+        self.hide()
     def ConClientes(self):
-        Clientes()    
-
+        self.C = Clientes(self)   
+        self.hide()
+    def ConSuscritos(self):
+        self.S = Suscritos(self)
+        self.hide()         
+        
+                     
 if __name__=="__main__":
-
-    app = QApplication(sys.argv)
+    app = QApplication([])
     Blockbuster = Blockbuster()
     app.exec()        
