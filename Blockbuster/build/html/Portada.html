@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Portada &#8212; documentación de Blockbuster - 1</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Manual de PyBlockBuster" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="portada">
+<h1>Portada<a class="headerlink" href="#portada" title="Enlace permanente a este encabezado">¶</a></h1>
+<p id="id1">Es un menú principal muy simple, te encontrarás con una hoja en blanco que tendrá 4 botones.
+Cada uno de ellos te llevará a una sección distinta sobre los datos de la taquillera.</p>
+<p>Así como des a uno de ellos, el menu principal se esconderá y mostrará la tabla.
+<em>Estas 4 secciones son:</em></p>
+<ul class="simple">
+<li><p>Películas, que tiene la fila Pelis.py.</p></li>
+<li><p>Empleados, que tiene la fila Empleados.py.</p></li>
+<li><p>Clientes subscritos a la taquillera,que tiene la fila Suscritos.py.</p></li>
+<li><p>Entradas de los clientes,que tiene la fila Clientes.py.</p></li>
+</ul>
+<section id="peliculas">
+<h2>Películas<a class="headerlink" href="#peliculas" title="Enlace permanente a este encabezado">¶</a></h2>
+<p id="pelis">En esta clase vas a encontrar estos 6 métodos:</p>
+<ol class="arabic simple">
+<li><p>Evento de cierre.</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Este es muy sencillo de usar.Una vez le das al botón de cerrar, cerrará la conexión a la base de datos y la pestaña de pelis, reapareciendo así el menú principal.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Consulta</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Este botón abrirá un menú secundario de barra. Te dará las siguientes opciones para hacer tu consulta.</p></li>
+</ul>
+<blockquote>
+<div><p>2.1. Mostrar toda la tabla, este se explica por sí solo.</p>
+<p>2.2. ID (Busca las películas por el código unico que llevan.)</p>
+<p>2.3. Título (Buscará todas las películas que tengan las mismas letras que el título.)</p>
+<p>2.4. Presupuesto (Buscará por cuanto fué su presupuesto)</p>
+<blockquote>
+<div><div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>Esta pestaña, junto con Recaudaciones, Óscares, Razzis y Nominados, abrirá un menú de barras secundario.
+Este preguntará si buscas una cantidad exacta, o si buscas una cantidad menor o mayor del numero que pondrás después.</p>
+<p><strong>El resultado de hacer estas consultas no será mostrado en la tabla de la aplicación. La lista se mostrará en la línea de comandos, película por peĺicula.</strong></p>
+</div>
+</div></blockquote>
+<p>2.5. Recaudaciones (Buscará cuanto recaudaron sus ventas)</p>
+<p>2.6. Director (Buscará por el nombre del director)</p>
+<p>2.7. Actores (Buscará por el nombre del actor.)</p>
+<p>2.8. Óscares (Buscará cuantos Óscares gano la película)</p>
+<p>2.9. Razzis (Buscará cuantos Razzis gano la peĺicula)</p>
+<p>2.10. Nominados (Buscará cuantas veces fue nominada a los óscar)</p>
+</div></blockquote>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Añade</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Este botón añadirá la película sólo si has rellenado todos los datos en el formulario de la interfaz encima de la tabla.</p></li>
+</ul>
+<p>Una vez lo hayas hecho, se mostrará la película que hayas creado en la tabla <em>encima del primer resultado que veas de ella.
+Este cambio es temporal y volverá a su respectivo lugar una vez cierres la tabla del menú.</em></p>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>Edita</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Este botón editará los datos de la pelicula a la que le hayas puesto el ID en ella. <strong>Necesitas rellenar todos los datos del formulario para hacer la edición</strong></p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>Borra</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Este botón abrirá un menú de input donde te pedirá la ID de la película que quieras borrar. Si lo haces la fila será borrada de la tabla.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><p>Crea Informe</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Este enorme botón está debajo de la tabla de datos generará en la carpeta que tengas este código un informe sobre la tabla en la que estés en PDF usando reportlab.</p></li>
+</ul>
+<p><em>Cada informe de la tabla es distinto a los otros.</em></p>
+</div></blockquote>
+</section>
+<section id="empleados">
+<h2>Empleados<a class="headerlink" href="#empleados" title="Enlace permanente a este encabezado">¶</a></h2>
+<p id="id2">Esta clase es muy parecida a la clase anterior, solo tiene este cambio en el método de las consultas.
+1. Consulta. Este botón dará las siguientes opciones para hacer tu consulta, tambíen en menú de barras:</p>
+<blockquote>
+<div><p>1.1. ID (Busca a los empleados por el código unico que llevan.)</p>
+<p>1.2. DNI (Busca a los empleados por su Documento Nacional de Identidad.)</p>
+<p>1.3. Nombre (Busca a los empleados por su nombre)</p>
+<p>1.4. Apellido (Busca a los empleados por el apellido que tengan)</p>
+<p>1.5. Clientes atendidos (Buscará a los empleados cuantos según cuantos clientes atendió este mes.)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Este abrirá un menú de barras que pedirá una comparación o bien la cantidad exacta.</p></li>
+</ul>
+<p>Este te dará tambien una lista con los resultados por la línea de comandos.</p>
+</div></blockquote>
+<p>1.6. Salario (Busca a los empleados según su salario mensual. <em>Este funciona de la misma manera que los clientes atendidos</em>)</p>
+<p>1.7. Jornada (Busca a los empleados según su turno de trabajo.)</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Este abrirá un menu de barras que pedirá el turno del empleado (Matutino,Vespertino o Nocturno)
+Mostrará todos los empleados en la tabla de datos que tengan ese horario de trabajo.</p>
+</div>
+</section>
+<section id="suscritos">
+<h2>Suscritos<a class="headerlink" href="#suscritos" title="Enlace permanente a este encabezado">¶</a></h2>
+<p id="id3">En esta clase tampoco hay grandes diferencias, solo cambió consultas también.
+1. Consulta. Este botón dará las siguientes opciones para hacer tu consulta, tambíen en menú de barras:</p>
+<blockquote>
+<div><p>1.1. ID (Busca a los subscriptores por el código unico que llevan.)</p>
+<p>1.2. DNI (Busca a los subscriptores por su Documento Nacional de Identidad.)</p>
+<p>1.3. Nombre (Busca a los subscriptores por su nombre)</p>
+<p>1.4. Apellido (Busca a los subscriptores por el apellido que tengan)</p>
+<p>1.5. Edad (Busca a los subscriptores por los años que tengan)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Este abrirá un menú de barras que pedirá una comparación o bien la cantidad exacta.</p></li>
+</ul>
+<p>Dará tambien una lista con los resultados por la línea de comandos.</p>
+</div></blockquote>
+<p>1.6. Pelis vistas (Busca a los subscriptores por la cantidad de películas que vió este mes, usando la misma forma que por su edad)</p>
+</div></blockquote>
+</section>
+<section id="clientes">
+<h2>Clientes<a class="headerlink" href="#clientes" title="Enlace permanente a este encabezado">¶</a></h2>
+<p id="id4">Esta clase tiene sus detalles que merecen mención. Ahora hablaremos de las diferencias entre estes métodos de los demás.</p>
+<p>Tiene, aparte de los otros 6 métodos, uno específico en caso de que el cliente sea subscriptor o no de la taquillera. <em>Veamos cuales son:</em></p>
+<ol class="arabic simple">
+<li><p>Evento de cierre, ya mencionada su función. Está en todas las clases.</p></li>
+<li><p>Suscripción</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>Este método, único de la tabla Clientes. Se mostrará si le damos al botón de chequeo si el cliente está suscrito o no.
+Una vez presionado, te pedirá que insertes la ID del suscriptor que necesites.</p>
+<p><strong>Una vez puesto el ID del suscriptor, esta ID permanecerá ahí hasta que le des al botón de chequeo de nuevo.</strong></p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Consulta. También en menú de barras, te dará estas opciones:</p></li>
+</ol>
+<blockquote>
+<div><p>3.1. ID (Busca por la ID de la entrada)</p>
+<p>3.2. Fecha (Busca por el día y hasta por la hora y minutos que se compro la entrada.)</p>
+<p>3.3. Tipo (Busca según el tipo de edad de la entrada. <em>Si tuvo descuento de anciano o infantil, etc.</em>)</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Este abrirá un menú de barras con los 3 tipos de entrada (Infante,Adulto y Anciano).
+<strong>Mostrará los resultados por la tabla de datos una vez escogido el tipo.</strong></p>
+</div>
+</div></blockquote>
+<p>3.4. Empleado que le atendió (Busca por la ID del empleado que le atendiera.)</p>
+<p>3.5. Película (Busca por la ID de la película a ver)</p>
+<p>3.6. Precio (Busca según cuanto haya costado la entrada a la gran pantalla.)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>También abrirá un menú de barras que pedirá una comparación.</p></li>
+</ul>
+<p>Dará tambien la lista de resultados por la línea de comandos.</p>
+</div></blockquote>
+<p>3.7. Suscriptor (Busca según la ID del suscriptor que tenga.)</p>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>Añade</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Este botón <em>actuará de manera diferente si estás suscrito o no.</em>
+<strong>Si no le diste al botón de chequeo de subscripción, dejará el campo vacío como None,</strong> si le has dado una ID de subscriptor, la pondra ahí.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>Edita</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Este botón editará también <em>de forma distinta según le hayas dado una ID de suscriptor o no.</em>
+<strong>Editará el campo vacío si te has hecho suscriptor,</strong> y si no lo eres. No lo hará.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><p>Borra, este campo borra preguntando por la ID primero, como en las demás tablas.</p></li>
+<li><p>Crea Informe, crea un informe con datos sobre las entradas de la taquillera de este mes.</p></li>
+</ol>
+<p>Para crear el informe sin problemas a la hora de mostrar los gráficos en rueda, es recomendable que el ID de empleado y de las Películas
+estén dentro del rango que tienen. <em>Por ejemplo:</em> Si hay 15 películas, <strong>la última ID de peli que se verá será la ID p15. No se verán otras después de eso.</strong></p>
+<p>Fuera de eso hay algo interesante a contar. <em>Si una película o empleado</em> es actualizad&#64; o borrad&#64;, <strong>este cambio afectará a la tabla de las entradas.</strong></p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Blockbuster</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Portada</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#peliculas">Películas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#empleados">Empleados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#suscritos">Suscritos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clientes">Clientes</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="capítulo anterior">Manual de PyBlockBuster</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2024, JJManeiro.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/Portada.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
